@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+{% block title %}
+    <title>{{ dato.title }}</title>
+{% endblock %}
+
+{% block content %}
+{{super()}}
+	<h1>Encabezado condicion y bucle</h1>
+	{% if dato >= 18 %}
+	<h2>Eres mayor de edad, tienes {{dato}} anos</h2>
+	{% elif dato <= 0 %}
+	<h2>Esa edad no es valida</h2>
+	{% else %}
+	<h2>No puedes entrar</h2>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends './base.html' %}
+{% block title %}
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Acerca de Nosotros</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	</head>
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Acerca de Nosotros</h1>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/servicios">Servicios</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="about-section">
+        <h2>Nuestra Misión</h2>
+        <p>En [Nombre de la Empresa], nos dedicamos a proporcionar soluciones innovadoras que mejoren la vida de nuestros clientes. Nuestro compromiso con la calidad y la satisfacción del cliente nos distingue en la industria.</p>
+
+        <h2>Nuestro Equipo</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Miembro del equipo">
+                <h3>Juan Pérez</h3>
+                <p>CEO y Fundador</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Miembro del equipo">
+                <h3>María López</h3>
+                <p>Directora de Marketing</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/100" alt="Miembro del equipo">
+                <h3>Carlos García</h3>
+                <p>Desarrollador Principal</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 [Nombre de la Empresa]. Todos los derechos reservados.</p>
+    <a href="/">Ir a inicio</a>
+</footer>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+{% block title %}
+    <title>{{ datos.title }}</title>
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    </div>
+    <div class="container"> <!-- Añadido contenedor -->
+        <header>
+            <h1>{{ datos.encabezado }}</h1>
+        </header>
+
+        <div class="hero">
+            <h1>Tu Solución Ideal</h1>
+        </div>
+
+        <div class="content">
+            <div class="section" id="servicios">
+                <h2>Servicios</h2>
+                <p>Ofrecemos una amplia gama de servicios diseñados para satisfacer tus necesidades. <a href="/servicios">Descubre más</a></p>
+            </div>
+
+            <div class="section" id="productos">
+                <h2>Productos</h2>
+                <p>Nuestra selección de productos de alta calidad está aquí para ti. <a href="/productos">Explora nuestros productos</a></p>
+            </div>
+
+            <div class="section" id="acerca-de">
+                <h2>Acerca de</h2>
+                <p>Conoce más sobre nuestra historia y misión. <a href="/about">Leer más</a></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Empresa XYZ. Todos los derechos reservados.</p>
+        </footer>
+    </div> <!-- Cierre del contenedor -->
+{% endblock %}

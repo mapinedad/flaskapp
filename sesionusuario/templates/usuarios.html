@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>{{ usuario[0] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('dentro') }}">Volver</a>
+</body>
+</html>

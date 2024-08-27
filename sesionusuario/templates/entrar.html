@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+Acceso usuario
+{% endblock %}
+
+{% block contenido %}
+<section class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Acceso usuario</h3>
+                </div>
+                <div class="card-body">
+                    <form action="{{url_for('login')}}" method="POST">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input autofocus required type="email" class="form-control" name="email" id="email" placeholder="email@test.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input required type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Clave...">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% with mensajes_flash = get_flashed_messages() %}
+                {% if mensajes_flash %}
+                    <div class="alert alert-danger mt-3" role="alert">
+                        <ul class="mb-0">
+                            {% for mensaje in mensajes_flash %}
+                                <li>{{ mensaje }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</section>
+{% endblock %}

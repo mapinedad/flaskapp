@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Mi Aplicación CRUD</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('agregar_articulo') }}">Crear</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>Bienvenido a Mi Aplicación CRUD</h2>
+    <p>Aquí podrás realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en tu base de datos.</p>
+</main>
+<footer>
+    <p>&copy; 2024 Mi Aplicación CRUD</p>
+</footer>
+{% endblock %}

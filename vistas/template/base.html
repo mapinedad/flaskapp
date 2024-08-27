@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    {% block title %}
+        <title>Plantilla Base</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <img src="{{url_for('static',filename='img/logo.png')}}" alt="">
+        {% include 'includes/barranavegacion.html' %}
+    </header>
+    {% block content %}
+        <section id="contenido">
+            <h1>Plantilla base para Flask</h1>
+        </section>
+    {% endblock %}
+</body>
+</html>
